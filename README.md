@@ -1,5 +1,22 @@
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4e4df8bd-0e62-4fc8-add8-236365492ab3" />
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a8f0b893-0cdf-4f77-9844-9192c53f5eae" />
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/9012fd2a-5eec-44eb-bae5-c3be4db62498" />
+# Milk Distribution System
 
+## Production QR Setup
+
+1. Run ngrok: `ngrok http 8080` → Copy `https://xyz.ngrok-free.app`
+2. Update QR img src:
+   ```
+   https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https://xyz.ngrok-free.app/milk-system/
+   ```
+3. Print QR → Customers scan from any phone globally!
+
+**Local Test:** http://localhost:8080/milk-system/
+**Admin:** http://localhost:8080/milk-system/admin/login.php
+
+## Features
+- Cow/Buffalo milk addons
+- 10AM-9PM update window
+- Organic farm UI
+- Auto DB setup
+
+Live & perfect!
 
