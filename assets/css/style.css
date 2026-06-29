@@ -1,0 +1,166 @@
+/* MilkWise - Professional Theme */
+:root {
+  --milk-white: #f8f7f4;
+  --cream: #fff5e6;
+  --milk-blue: #4a90e2;
+  --dairy-gold: #f4c430;
+  --shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+body {
+  background: linear-gradient(135deg, var(--cream) 0%, #e8f4fd 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+}
+
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1516467448480-3ec1e4a9bd5b?w=2070&q=80') no-repeat center/cover;
+  height: 70vh;
+  position: relative;
+  color: white;
+  display: flex;
+  align-items: center;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.qr-section {
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+  margin-top: -50px;
+  z-index: 10;
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.4);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.navbar {
+  box-shadow: var(--shadow);
+  background: rgba(255,255,255,0.95) !important;
+  backdrop-filter: blur(10px);
+}
+
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: 700;
+  background: linear-gradient(45deg, var(--milk-blue), var(--dairy-gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.card {
+  border: none;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.btn-milk {
+  background: linear-gradient(45deg, var(--cream), #fff8e1);
+  border: 2px solid var(--dairy-gold);
+  color: var(--milk-blue);
+  font-weight: 600;
+  border-radius: 50px;
+  padding: 12px 30px;
+  transition: all 0.3s ease;
+}
+
+.btn-milk:hover {
+  background: var(--dairy-gold);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(244, 196, 48, 0.4);
+}
+
+.total-milk {
+  font-size: 3.5rem;
+  font-weight: 800;
+  background: linear-gradient(45deg, #28a745, #20c997);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.stat-card {
+  background: linear-gradient(135deg, white 0%, var(--cream) 100%);
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card::before {
+  content: '🥛';
+  font-size: 4rem;
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  opacity: 0.1;
+}
+
+.form-control, .form-select {
+  border-radius: 12px;
+  border: 2px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--milk-blue);
+  box-shadow: 0 0 0 0.2rem rgba(74, 144, 226, 0.25);
+}
+
+.alert {
+  border-radius: 15px;
+  border: none;
+  padding: 1.5rem;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.milk-icon {
+  animation: float 3s ease-in-out infinite;
+}
+
+footer {
+  background: linear-gradient(135deg, var(--milk-blue), #2e7bc3);
+  color: white;
+  margin-top: 4rem;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 40vh;
+  }
+  .total-milk {
+    font-size: 2.5rem;
+  }
+}
